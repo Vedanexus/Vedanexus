@@ -14,18 +14,17 @@ body {
 
 /* Header */
 header {
-  background: #b71c1c;
-  color: white;
-  padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #b71c1c;
 }
 
 .logo-img {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 nav ul {

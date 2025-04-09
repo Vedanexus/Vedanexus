@@ -1,40 +1,36 @@
-const phrases = [
-  "Maintaining your IT hardware...",
-  "Fast, Reliable, Affordable...",
-  "VedaNexus is always here for you."
-];
-
-let currentPhraseIndex = 0;
-let currentCharIndex = 0;
-let isDeleting = false;
-let displayElement = document.getElementById("typedText");
-
-function typeWriter() {
-  const currentPhrase = phrases[currentPhraseIndex];
-
-  if (isDeleting) {
-    currentCharIndex--;
-  } else {
-    currentCharIndex++;
+// Typing animation
+let text = "Maintaining your IT hardware";
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("typing-text").textContent += text.charAt(i);
+    i++;
+    setTimeout(type, 100);
   }
+}
+window.onload = type;
 
-  const updatedText = currentPhrase.substring(0, currentCharIndex);
-  displayElement.textContent = updatedText;
-
-  let typingSpeed = isDeleting ? 100 : 150;
-
-  if (!isDeleting && currentCharIndex === currentPhrase.length) {
-    typingSpeed = 1000;
-    isDeleting = true;
-  } else if (isDeleting && currentCharIndex === 0) {
-    isDeleting = false;
-    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-    typingSpeed = 500;
-  }
-
-  setTimeout(typeWriter, typingSpeed);
+// Scroll to top
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  typeWriter();
+// Show button on scroll
+window.onscroll = function () {
+  document.getElementById("scrollTopBtn").style.display =
+    window.scrollY > 100 ? "block" : "none";
+};
+
+// Thank you message
+function showThankYou() {
+  document.getElementById("thank-you-message").style.display = "block";
+  setTimeout(() => {
+    document.getElementById("thank-you-message").style.display = "none";
+  }, 4000);
+  return true;
+}
+
+// Theme toggle
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 });

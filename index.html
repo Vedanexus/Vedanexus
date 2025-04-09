@@ -4,59 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VedaNexus - IT Hardware Maintenance</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<!-- Typing animation -->
-<h2 id="typedText"></h2>
-
-<!-- Scroll to top button -->
-<button id="scrollTopBtn" title="Go to top">↑</button>
-
-<!-- Dark/Light mode toggle -->
-<button id="toggleTheme">Toggle Theme</button>
-
-<!-- WhatsApp Floating Chat Button -->
-<a href="https://wa.me/919644272777" class="chat-popup" target="_blank">Need Help?</a>
 <body>
 
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="VedaNexus Logo" class="logo-img">
-    <span>VedaNexus</span>
-  </div>
-  <nav>
-    ...
-  </nav>
-</header>
+  <!-- Header with Logo -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="VedaNexus Logo" class="logo-img">
+      <span>VedaNexus</span>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <section id="about">
-    <h1>Welcome to VedaNexus</h1>
-    <p>Providing reliable IT hardware maintenance for small to large businesses.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1><span id="typing-text">Maintaining your IT hardware</span></h1>
+    <p>Reliable, fast, and professional IT hardware maintenance for companies of all sizes.</p>
   </section>
 
+  <!-- About Section -->
+  <section id="about">
+    <h2>About VedaNexus</h2>
+    <p>We provide expert-level IT hardware maintenance services to businesses, ensuring smooth operations and minimal downtime.</p>
+  </section>
+
+  <!-- Services Section -->
   <section id="services">
     <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card">Desktop & Laptop Repair</div>
-      <div class="card">Network Setup & Maintenance</div>
-      <div class="card">Hardware Upgrades</div>
-    </div>
+    <ul>
+      <li>Desktop & Laptop Repairs</li>
+      <li>Network Maintenance</li>
+      <li>Hardware Replacement</li>
+      <li>On-site & Remote Support</li>
+    </ul>
   </section>
 
+  <!-- Contact Form -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/singh.ajay488@gmail.com" method="POST" onsubmit="return showThankYou()">
+    <form action="https://formspree.io/f/xkgjkobb" method="POST" onsubmit="return showThankYou()">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your IT requirement..." required></textarea>
-      <button type="submit">Send</button>
+      <textarea name="message" placeholder="Your IT issue..." required></textarea>
+      <button type="submit">Submit</button>
     </form>
+    <div id="thank-you-message" style="display: none;">Thank you! We’ll get back to you soon.</div>
   </section>
 
-  <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">Chat on WhatsApp</a>
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
-<button id="scrollTopBtn" title="Go to top">↑</button>
-<script src="script.js"></script>
+
 </body>
 </html>

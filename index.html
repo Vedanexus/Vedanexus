@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VedaNexus - IT Hardware Maintenance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header without logo -->
+  <header>
+    <div class="site-name">VedaNexus</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1><span id="typing-text"></span></h1>
+    <p>Reliable, fast, and professional IT hardware maintenance for companies of all sizes.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About VedaNexus</h2>
+    <p>We provide expert-level IT hardware maintenance services to businesses, ensuring smooth operations and minimal downtime.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Desktop & Laptop Repairs</li>
+      <li>Network Maintenance</li>
+      <li>Hardware Replacement</li>
+      <li>On-site & Remote Support</li>
+    </ul>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xkgjkobb" method="POST" onsubmit="return showThankYou()">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your IT issue..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="thank-you-message" style="display: none;">Thank you! We’ll get back to you soon.</div>
+  </section>
+
+  <!-- Floating Chat Button -->
+  <div id="chat-btn">Chat</div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

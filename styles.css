@@ -1,24 +1,10 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background: linear-gradient(to right, #f0f4f8, #ffffff);
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Header */
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
-  background: #b71c1c;
+  background-color: #b71c1c;
+  color: white;
 }
 
 .logo {
@@ -31,121 +17,4 @@ header {
   height: 50px;
   width: auto;
   object-fit: contain;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-}
-
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero .highlight {
-  color: #b71c1c;
-  font-weight: bold;
-}
-
-#typedText {
-  font-size: 24px;
-  color: #444;
-  margin-top: 10px;
-  font-style: italic;
-}
-
-/* Services */
-#services {
-  padding: 60px 20px;
-  background: #fff8f5;
-  text-align: center;
-}
-
-#services h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.services-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  font-size: 18px;
-}
-
-.services-list li {
-  background: #f8e8e8;
-  padding: 15px 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Form */
-.form-section {
-  padding: 60px 20px;
-  background: #e1f5fe;
-  text-align: center;
-}
-
-.form-section h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-form input,
-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  resize: vertical;
-}
-
-form button {
-  padding: 12px;
-  background: #b71c1c;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background: #880e0e;
-}
-
-/* Footer */
-footer {
-  background: #b71c1c;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
 }

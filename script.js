@@ -34,7 +34,7 @@ function type() {
 
     if (!isDeleting && j === current.length) {
       isDeleting = true;
-      setTimeout(type, 1000);
+      setTimeout(type, 1000); // pause before deleting
       return;
     } else if (isDeleting && j === 0) {
       isDeleting = false;

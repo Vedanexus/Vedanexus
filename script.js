@@ -24,28 +24,42 @@ const phrases = [
   "Fast, Reliable, Affordable...",
   "VedaNexus is always here for you."
 ];
-let i = 0, j = 0, current = "", isDeleting = false;
 
-function type() {
-  if (i < phrases.length) {
-    current = phrases[i];
-    let display = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
-    document.getElementById("typedText").textContent = display;
+let i = 0;
+let j = 0;
+let currentPhrase = "";
+let isDeleting = false;
+let isPaused = false;
 
-    if (!isDeleting && j === current.length) {
+function typeEffect() {
+  if (isPaused) return;
+
+  currentPhrase = phrases[i];
+  const displayText = isDeleting
+    ? currentPhrase.substring(0, j--)
+    : currentPhrase.substring(0, j++);
+
+  document.getElementById("typedText").textContent = displayText;
+
+  if (!isDeleting && j === currentPhrase.length) {
+    isPaused = true;
+    setTimeout(() => {
       isDeleting = true;
-      setTimeout(type, 1000); // pause before deleting
-      return;
-    } else if (isDeleting && j === 0) {
-      isDeleting = false;
-      i = (i + 1) % phrases.length;
-    }
-
-    setTimeout(type, isDeleting ? 100 : 120);
+      isPaused = false;
+      typeEffect();
+    }, 1200); // Pause before deleting
+    return;
   }
+
+  if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % phrases.length;
+  }
+
+  setTimeout(typeEffect, isDeleting ? 100 : 150);
 }
-type();
-function showThankYou() {
-  alert("Thanks for reaching out to VedaNexus! We'll get back to you soon.");
-  return true; // important: this lets the form still submit
-}
+
+// Start typing once after DOM loads
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+});

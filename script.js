@@ -35,12 +35,13 @@ function type() {
     if (!isDeleting && j === current.length) {
       isDeleting = true;
       setTimeout(type, 1000);
+      return;
     } else if (isDeleting && j === 0) {
       isDeleting = false;
       i = (i + 1) % phrases.length;
     }
 
-    setTimeout(type, isDeleting ? 60 : 120);
+    setTimeout(type, isDeleting ? 100 : 120);
   }
 }
 type();

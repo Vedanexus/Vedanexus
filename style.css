@@ -132,3 +132,24 @@ body.dark-mode header {
   opacity: 1;
   transform: translateY(0);
 }
+#scrollBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #b30000;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+#scrollBtn:hover {
+  background-color: #900000;
+}

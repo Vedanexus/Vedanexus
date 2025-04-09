@@ -44,3 +44,7 @@ function type() {
   }
 }
 type();
+function showThankYou() {
+  alert("Thanks for reaching out to VedaNexus! We'll get back to you soon.");
+  return true; // important: this lets the form still submit
+}

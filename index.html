@@ -6,87 +6,88 @@
   <title>VedaNexus</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #222;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #333; line-height: 1.6; }
     header {
-      background-color: #b30000;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
+      background: #b30000; color: white; padding: 1.5rem;
+      text-align: center; position: sticky; top: 0; z-index: 1000;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    header h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
+    header p { font-size: 1.1rem; }
+
+    section { padding: 2rem 1rem; max-width: 900px; margin: auto; }
+    h2 { color: #b30000; margin-bottom: 1rem; font-size: 1.8rem; }
+
+    .about, .clients, .testimonials, .contact { margin-top: 3rem; }
+    .clients-logos { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .clients-logos div {
+      background: #eee; padding: 1rem 2rem; border-radius: 6px;
+      flex: 1 0 30%; text-align: center; font-weight: bold;
     }
-    header p {
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
+    .testimonial {
+      background: #f9f9f9; padding: 1rem; border-left: 4px solid #b30000;
+      margin-bottom: 1rem; border-radius: 4px;
     }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 {
-      color: #b30000;
-      margin-bottom: 1rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
+
+    form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
     input, textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
+      padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;
     }
     button {
-      padding: 0.8rem;
-      background-color: #b30000;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
+      background: #b30000; color: #fff; border: none; padding: 0.8rem;
+      font-size: 1rem; border-radius: 4px; cursor: pointer; transition: background 0.3s;
     }
-    button:hover {
-      background-color: #800000;
-    }
+    button:hover { background: #800000; }
     footer {
-      text-align: center;
-      padding: 1rem;
-      background: #f4f4f4;
-      font-size: 0.9rem;
+      text-align: center; padding: 1rem; background: #f2f2f2; font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .clients-logos div { flex: 1 0 100%; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to VedaNexus</h1>
-    <p>Your IT Hardware Maintenance Partner</p>
+    <h1>VedaNexus</h1>
+    <p>IT Hardware Maintenance Solutions for Every Business</p>
   </header>
 
-  <section>
-    <h2>Our Services</h2>
-    <p>We provide fast, reliable IT maintenance services for small to large businesses. We specialize in maintaining desktops, laptops, servers, and networking equipment to ensure your operations run smoothly.</p>
+  <section class="about">
+    <h2>About Us</h2>
+    <p>VedaNexus is your trusted IT hardware maintenance partner. We help small, medium, and large companies ensure their systems run smoothly and securely. With fast response times, certified engineers, and affordable plans — your infrastructure is in safe hands.</p>
   </section>
 
-  <section>
+  <section class="clients">
+    <h2>Our Clients</h2>
+    <div class="clients-logos">
+      <div>ABC Pvt Ltd</div>
+      <div>StartupX</div>
+      <div>City Hospital</div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      "VedaNexus keeps our IT running without a hitch. Superb support and fast turnaround!"<br>
+      — Rakesh Sharma, CEO, StartupX
+    </div>
+    <div class="testimonial">
+      "We trust VedaNexus with our hospital's critical systems. Highly reliable team."<br>
+      — Dr. Meena Verma, City Hospital
+    </div>
+  </section>
+
+  <section class="contact">
     <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
+    <form action="https://formspree.io/f/xkgjkobb" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Inquiry" required></textarea>
-      <button type="submit">Submit</button>
+      <button type="submit">Send Inquiry</button>
     </form>
   </section>
 

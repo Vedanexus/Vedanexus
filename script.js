@@ -24,18 +24,17 @@ function typeWriter() {
   let typingSpeed = isDeleting ? 100 : 150;
 
   if (!isDeleting && currentCharIndex === currentPhrase.length) {
-    typingSpeed = 1000; // pause before deleting
+    typingSpeed = 1000;
     isDeleting = true;
   } else if (isDeleting && currentCharIndex === 0) {
     isDeleting = false;
     currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-    typingSpeed = 500; // pause before typing next
+    typingSpeed = 500;
   }
 
   setTimeout(typeWriter, typingSpeed);
 }
 
-// Start when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter();
 });

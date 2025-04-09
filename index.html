@@ -11,11 +11,16 @@
     header {
       background: #b30000; color: white; padding: 1.5rem;
       text-align: center; position: sticky; top: 0; z-index: 1000;
+      animation: fadeIn 1.2s ease-in;
+    }
+    header img {
+      height: 60px; margin-bottom: 0.5rem;
+      animation: popIn 1s ease-in-out;
     }
     header h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
     header p { font-size: 1.1rem; }
 
-    section { padding: 2rem 1rem; max-width: 900px; margin: auto; }
+    section { padding: 2rem 1rem; max-width: 900px; margin: auto; animation: fadeIn 1.4s ease-in; }
     h2 { color: #b30000; margin-bottom: 1rem; font-size: 1.8rem; }
 
     .about, .clients, .testimonials, .contact { margin-top: 3rem; }
@@ -43,6 +48,15 @@
       margin-top: 3rem;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
     @media (max-width: 600px) {
       header h1 { font-size: 2rem; }
       .clients-logos div { flex: 1 0 100%; }
@@ -51,6 +65,7 @@
 </head>
 <body>
   <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Red_circle_frame.svg/2048px-Red_circle_frame.svg.png" alt="VedaNexus Logo" />
     <h1>VedaNexus</h1>
     <p>IT Hardware Maintenance Solutions for Every Business</p>
   </header>
